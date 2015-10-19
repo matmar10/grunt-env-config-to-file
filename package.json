@@ -1,7 +1,7 @@
 {
   "name": "grunt-env-config-to-file",
   "description": "Install heroku configuration from environment variables as config files (JSON or YAML)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/matmar10/grunt-env-config-to-file",
   "author": {
     "name": "Matthew J. Martin",

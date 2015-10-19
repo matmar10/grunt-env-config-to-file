@@ -67,7 +67,7 @@ In this example, environment properties are mapped to custom names and assigned 
 grunt.initConfig({
   herokuConfig: {
     options: {
-      envVars: {
+      map: {
         DATABASE_URL: 'dbUrl',
         NODE_ENV: 'env',
         RABBITMQ_BIGWIG_URL: 'rabbitMQUrl'        

@@ -1,0 +1,3 @@
+someOtherProperty: someOtherValue
+DATABASE_URL: 'postgresql://user:pass@host:port/database'
+RABBITMQ_BIGWIG_URL: 'amqp://user:pass@host:10000/vhost'

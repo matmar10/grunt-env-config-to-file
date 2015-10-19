@@ -1,0 +1,15 @@
+{
+  "someOtherProperty": "someOtherValue",
+  "level0": {
+    "level0Prop": "level0Value",
+    "level1": {
+      "level1Prop": "level1Value",
+      "level2": {
+        "level2Prop": "level2Value",
+        "level3": {
+          "level3Prop": "level3Value"
+        }
+      }
+    }
+  }
+}

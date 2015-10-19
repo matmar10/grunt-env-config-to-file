@@ -1,0 +1,17 @@
+{
+  "someOtherProperty": "someOtherValue",
+  "level0": {
+    "level0Prop": "level0Value",
+    "level1": {
+      "level1Prop": "level1Value",
+      "level2": {
+        "level2Prop": "level2Value",
+        "level3": {
+          "level3Prop": "level3Value"
+        },
+        "RABBITMQ_BIGWIG_URL": "amqp://user:pass@host:10000/vhost"
+      }
+    },
+    "DATABASE_URL": "postgresql://user:pass@host:port/database"
+  }
+}

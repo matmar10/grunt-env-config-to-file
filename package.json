@@ -1,8 +1,8 @@
 {
-  "name": "grunt-heroku-config",
+  "name": "grunt-env-config-to-file",
   "description": "Install heroku configuration from environment variables as config files (JSON or YAML)",
   "version": "0.0.1",
-  "homepage": "https://github.com/matmar10/grunt-heroku-config",
+  "homepage": "https://github.com/matmar10/grunt-env-config-to-file",
   "author": {
     "name": "Matthew J. Martin",
     "email": "matthew.mar10@gmail.com",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/matmar10/grunt-heroku-config.git"
+    "url": "git://github.com/matmar10/grunt-env-config-to-filegit"
   },
   "bugs": {
-    "url": "https://github.com/matmar10/grunt-heroku-config/issues"
+    "url": "https://github.com/matmar10/grunt-env-config-to-file/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/matmar10/grunt-heroku-config/blob/master/LICENSE-MIT"
+      "url": "https://github.com/matmar10/grunt-env-config-to-file/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
@@ -43,6 +43,8 @@
     "gruntplugin"
   ],
   "dependencies": {
+    "merge": "^1.2.0",
+    "object-mapper": "^2.2.5",
     "yamljs": "^0.2.4"
   }
 }

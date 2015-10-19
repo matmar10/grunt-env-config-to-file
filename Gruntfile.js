@@ -61,11 +61,27 @@ module.exports = function (grunt) {
     },
 
     // Configuration to be run (and then tested).
-    herokuConfig: {
+    envConfigToFile: {
       defaultOptions: {
         options: {},
         files: {
           'tmp/production.json': 'test/fixtures/production.json'
+        }
+      },
+      nestedProperties: {
+        options: {
+          map: {
+            'DATABASE_URL': 'level0.DATABASE_URL',
+            'RABBITMQ_BIGWIG_URL': 'level0.level1.level2.RABBITMQ_BIGWIG_URL'
+          }
+        },
+        files: {
+          'tmp/production-nested.json': 'test/fixtures/production-nested.json'
+        }
+      },
+      yamlFile: {
+        files: {
+          'tmp/production.yml': 'test/fixtures/production.yml'
         }
       }
     },
@@ -81,7 +97,7 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['jsbeautifier:test', 'jshint', 'clean', 'herokuConfig', 'nodeunit']);
+  grunt.registerTask('test', ['jsbeautifier:test', 'jshint', 'clean', 'envConfigToFile', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jsbeautifier:dev', 'jshint', 'test']);

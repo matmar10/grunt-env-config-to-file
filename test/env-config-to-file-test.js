@@ -22,7 +22,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports.herokuConfig = {
+exports.envConfigToFile = {
   setUp: function (done) {
     process.env.DATABASE_URL = 'postgresql://user:pass@host:port/database';
     process.env.RABBITMQ_BIGWIG_URL = 'amqp://user:pass@host:10000/vhost';
@@ -35,6 +35,24 @@ exports.herokuConfig = {
     var expected = grunt.file.read('test/expected/production.json');
     test.equal(actual, expected,
       'Should convert default environment variables to configuration properties in the specified file(s)');
+    test.done();
+  },
+  nestedProperties: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/production-nested.json');
+    var expected = grunt.file.read('test/expected/production-nested.json');
+    test.equal(actual, expected,
+      'Should save environment variables in nested properties');
+    test.done();
+  },
+  yamlFiles: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/production.yml');
+    var expected = grunt.file.read('test/expected/production.yml');
+    test.equal(actual, expected,
+      'Should save environment variables as YAML file');
     test.done();
   }
 };

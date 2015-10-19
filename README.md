@@ -141,8 +141,13 @@ Run `grunt jshint` to validate.
 
 Initial release. Add working barebones version
 
-### 0.0.2
+### 0.2.0
 
 * Add support for YAML
 * Use object mapper to allow for generic nested property mapping
 * Rename task to be more generic (was grunt-heroku-config)
+
+### 0.2.1
+
+Update release notes to match.
+

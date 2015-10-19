@@ -1,0 +1,48 @@
+{
+  "name": "grunt-heroku-config",
+  "description": "Install heroku configuration from environment variables as config files (JSON or YAML)",
+  "version": "0.0.1",
+  "homepage": "https://github.com/matmar10/grunt-heroku-config",
+  "author": {
+    "name": "Matthew J. Martin",
+    "email": "matthew.mar10@gmail.com",
+    "url": "http://matmar10.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matmar10/grunt-heroku-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matmar10/grunt-heroku-config/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/matmar10/grunt-heroku-config/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "DATABASE_URL=postgresql://user:pass@host:port/database RABBITMQ_BIGWIG_URL=amqp://user:pass@host:10000/vhost grunt test"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-jsbeautifier": "^0.2.10",
+    "grunt-release": "^0.13.0",
+    "load-grunt-tasks": "^3.3.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "yamljs": "^0.2.4"
+  }
+}
